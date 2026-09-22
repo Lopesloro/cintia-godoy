@@ -342,6 +342,18 @@ section[id]{scroll-margin-top:110px}
   .aviso{font-size:13px;letter-spacing:.14em;padding:8px var(--pad)}
   .acao{display:block}
   .chevron{bottom:96px}
+  /* no recorte do celular o CTA cai sobre a parte clara da foto:
+     um véu só no terço de baixo devolve o contraste sem escurecer o hero inteiro */
+  .hero-in{position:relative}
+  .hero::before{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:62%;z-index:1;
+    background:linear-gradient(rgba(35,32,28,0) 0%,rgba(35,32,28,.42) 46%,rgba(35,32,28,.58) 100%);
+  }
+  .hero-sub{max-width:300px;margin-left:auto;margin-right:auto}
+  /* no celular o botão cai sobre a roupa de cama clara: o preenchimento
+     translúcido garante o contraste onde o véu sozinho não chega */
+  .hero .pill--claro{background:rgba(35,32,28,.85)}
+  .hero .pill--claro:hover,.hero .pill--claro:focus-visible{background:#fff;color:var(--ink)}
   .banner,.hero{min-height:520px}
   .servico-nota{aspect-ratio:4/3;padding:36px}
   .servico-nota p{font-size:21px}
