@@ -119,6 +119,10 @@ em{font-style:italic}
 .aviso a{color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(250,242,236,.5);padding-bottom:2px}
 .aviso a:hover{border-bottom-color:var(--cream)}
 
+/* ao descer, a faixa recolhe e devolve a altura para a pagina */
+.aviso{max-height:96px;overflow:hidden;transition:max-height .35s ease,padding .35s ease,opacity .25s ease}
+.topo.rolado .aviso{max-height:0;padding-top:0;padding-bottom:0;opacity:0}
+
 .barra-topo{
   display:flex;align-items:center;justify-content:space-between;
   gap:24px;padding:22px var(--pad);
@@ -152,6 +156,21 @@ em{font-style:italic}
   transition:color .35s,border-color .32s;
 }
 .topo.solido .nav a{color:var(--ink)}
+
+/* botao pequeno do WhatsApp: fica visivel em qualquer largura, na cor do site.
+   Substitui a barra fixa do rodape, que comia 82px de toda tela de celular. */
+.zap{
+  display:inline-block;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:14px;text-transform:uppercase;letter-spacing:.16em;
+  text-decoration:none;color:#fff;
+  border:1px solid rgba(255,255,255,.7);border-radius:999px;
+  padding:9px 20px;line-height:1;
+  transition:background .35s,color .35s,border-color .35s;
+}
+.zap:hover,.zap:focus-visible{background:#fff;color:var(--ink);border-color:#fff}
+.topo.solido .zap{color:var(--ink);border-color:var(--ink)}
+.topo.solido .zap:hover,.topo.solido .zap:focus-visible{background:var(--ink);color:var(--cream)}
 .nav a:hover,.nav a:focus-visible{border-bottom-color:currentColor}
 
 /* ---------- hero ---------- */
@@ -172,6 +191,7 @@ em{font-style:italic}
 
 .hero-sub{
   margin:22px 0 0;color:rgba(255,255,255,.88);font-size:22px;
+  text-wrap:balance;   /* evita a última linha sozinha no celular */
   animation:sobe 1.2s ease-out .9s both;
 }
 .hero-cta{margin-top:44px;animation:sobe 1.2s ease-out 1.15s both}
@@ -296,24 +316,6 @@ section[id]{scroll-margin-top:110px}
   font-size:26px;text-transform:uppercase;letter-spacing:.16em;margin-bottom:14px;display:block;
 }
 
-/* ---------- barra fixa de ação (celular) ---------- */
-/* não é a bolinha verde: entra no fluxo, na cor do site */
-
-.acao{
-  display:none;
-  position:fixed;left:0;right:0;bottom:0;z-index:60;
-  background:var(--ink);
-  border-top:1px solid rgba(250,242,236,.18);
-  padding:14px 18px calc(14px + env(safe-area-inset-bottom));
-}
-.acao a{
-  display:block;text-align:center;text-decoration:none;
-  font-family:"Cormorant Garamond",Georgia,serif;
-  font-size:16px;text-transform:uppercase;letter-spacing:.18em;
-  color:var(--cream);border:1px solid rgba(250,242,236,.5);
-  border-radius:999px;padding:15px 20px;
-}
-
 /* ---------- reveal ---------- */
 /* a opacidade zero só existe quando o script está de pé: sem JS, nada some */
 
@@ -332,7 +334,7 @@ section[id]{scroll-margin-top:110px}
   :root{--pad:24px;--gap-sec:80px}
   h1{font-size:46px}
   h2{font-size:32px}
-  body{font-size:18px;padding-bottom:82px}  /* a barra fixa não cobre o rodapé */
+  body{font-size:18px}
   .lead,.hero-sub,.banner-in p,.insta p{font-size:19px}
   .nav{gap:20px}
   .nav a{font-size:13px;letter-spacing:.16em}   /* o tracking se mantém: sem ele o dialeto some */
@@ -340,8 +342,7 @@ section[id]{scroll-margin-top:110px}
   .marca b{font-size:20px}
   .barra-topo{padding:16px var(--pad)}
   .aviso{font-size:13px;letter-spacing:.14em;padding:8px var(--pad)}
-  .acao{display:block}
-  .chevron{bottom:96px}
+  .chevron{bottom:34px}
   /* no recorte do celular o CTA cai sobre a parte clara da foto:
      um véu só no terço de baixo devolve o contraste sem escurecer o hero inteiro */
   .hero-in{position:relative}
@@ -357,13 +358,22 @@ section[id]{scroll-margin-top:110px}
   .banner,.hero{min-height:520px}
   .servico-nota{aspect-ratio:4/3;padding:36px}
   .servico-nota p{font-size:21px}
+  .capa{height:100svh}          /* toda página abre em tela cheia no celular */
   .capa .hero-in h1{font-size:38px}
+  .zap{font-size:12px;letter-spacing:.12em;padding:8px 14px}
+  .nav{gap:14px}
   .rodape{padding:64px 0 90px}
 }
 
 @media (max-width:560px){
-  .marca b{font-size:17px;letter-spacing:.14em}
-  .marca span{font-size:10px;letter-spacing:.2em}
+  /* em 360px a barra do topo tem 312px úteis: marca + dois links + botão não cabem
+     no tamanho de 390. Tudo encolhe um degrau e o padding lateral cede 6px. */
+  .barra-topo{padding:14px 18px}
+  .marca b{font-size:15px;letter-spacing:.12em}
+  .marca span{font-size:9px;letter-spacing:.18em;margin-top:4px}
+  .nav{gap:12px}
+  .nav a{font-size:11px;letter-spacing:.12em}
+  .zap{font-size:11px;letter-spacing:.1em;padding:7px 12px}
   .rodape-grade{grid-template-columns:1fr;gap:34px}
   h1{font-size:38px}
   .pill{padding:16px 34px;font-size:15px}
@@ -374,4 +384,30 @@ section[id]{scroll-margin-top:110px}
   html{scroll-behavior:auto}
   .js .reveal{opacity:1;transform:none}
   .hero img{transform:none}
+}
+
+@media (max-width:400px){
+  /* no aparelho mais estreito o link de Sobre sai do topo — continua no rodapé
+     e dentro da home. O que não pode sair é o botão de agendar. */
+  .nav a[href="sobre.html"]{display:none}
+  .marca span{display:none}
+}
+
+@media (max-width:430px){
+  /* em 360px o rótulo do botão quebrava em duas linhas e empurrava o bloco
+     do hero para fora da tela curta. O texto continua inteiro, só menor. */
+  .hero .pill--claro{font-size:13px;letter-spacing:.14em;padding:14px 26px;white-space:nowrap}
+  .hero-in h1{font-size:34px}
+  .hero-sub{font-size:17px;max-width:270px;margin-top:18px}
+  .hero-cta{margin-top:28px}
+}
+
+@media (max-width:860px) and (max-height:700px){
+  /* aparelho curto (iPhone SE, Android 640): o hero tem menos altura útil
+     do que o texto pede, então a escala cede mais um degrau. */
+  .hero-in h1{font-size:30px}
+  .hero-sub{font-size:16px;margin-top:14px}
+  .hero-cta{margin-top:22px}
+  .hero .pill--claro{font-size:12px;padding:12px 22px}
+  .capa .hero-in h1{font-size:32px}
 }

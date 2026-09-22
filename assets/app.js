@@ -17,6 +17,7 @@
       if (passou !== solido) {
         solido = passou;
         topo.classList.toggle('solido', passou);
+        topo.classList.toggle('rolado', passou);   /* recolhe a faixa do Laser Day */
       }
     };
     marcar();
