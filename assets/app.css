@@ -1,0 +1,365 @@
+/* Cíntia Godoy — Estética e Bem-Estar
+   Dialeto B (Hospitalidade). Uma família serifada, sem sans em lugar nenhum.
+   Sem sombra, sem gradiente, sem raio em foto. */
+
+:root{
+  --cream:#FAF2EC;
+  --cream-alt:#F4E9E0;
+  --ink:#23201C;
+  --ink-soft:#5C554D;
+  --gold:#B08A4F;
+  --olive:#524B3A;
+  --line:#C9BCB0;
+
+  --wrap:1180px;
+  --pad:40px;
+  --gap-sec:140px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"EB Garamond",Georgia,serif;
+  font-size:19px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+img{max-width:100%;display:block}
+
+a{color:inherit}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+
+.pular{position:absolute;left:-9999px}
+.pular:focus{left:16px;top:16px;z-index:100;background:var(--ink);color:var(--cream);padding:12px 20px}
+
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ---------- tipografia ---------- */
+
+.display,h1,h2,h3{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-weight:300;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  line-height:1.25;
+  margin:0;
+}
+
+h1{font-size:84px}
+h2{font-size:44px}
+h3{font-size:22px;font-weight:400}
+
+.lead{
+  max-width:620px;margin:28px auto 0;
+  color:var(--ink-soft);font-size:22px;
+}
+
+.prose{max-width:68ch;font-size:19px}
+.prose p{margin:0 0 22px}
+.prose p:last-child{margin-bottom:0}
+
+.assinatura{font-style:italic;color:var(--ink-soft)}
+
+em{font-style:italic}
+
+/* links de texto */
+.link{
+  text-decoration:none;color:var(--gold);
+  background-image:linear-gradient(var(--gold),var(--gold));
+  background-size:0 1px;background-repeat:no-repeat;background-position:0 100%;
+  transition:background-size .32s ease-out;
+}
+.link:hover,.link:focus-visible{background-size:100% 1px}
+
+/* ---------- botões ---------- */
+
+.pill{
+  display:inline-block;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-weight:400;font-size:17px;
+  text-transform:uppercase;letter-spacing:.18em;
+  text-decoration:none;
+  padding:18px 52px;
+  border:1px solid var(--ink);
+  border-radius:999px;
+  background:transparent;color:var(--ink);
+  transition:background .4s,color .4s;
+}
+.pill:hover,.pill:focus-visible{background:var(--ink);color:var(--cream)}
+
+.pill--claro{border-color:#fff;color:#fff}
+.pill--claro:hover,.pill--claro:focus-visible{background:#fff;color:var(--ink)}
+
+.pill--mini{padding:14px 34px;font-size:16px}
+
+/* ---------- header ---------- */
+
+.topo{
+  position:fixed;inset:0 0 auto 0;z-index:50;
+  transition:background .35s,border-color .35s;
+  border-bottom:1px solid transparent;
+}
+.topo.solido{background:var(--cream);border-bottom-color:var(--line)}
+
+/* a faixa vive DENTRO do header: fora dele, os dois disputam o y=0 */
+.aviso{
+  background:var(--ink);color:var(--cream);
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:15px;text-transform:uppercase;letter-spacing:.16em;
+  text-align:center;padding:9px var(--pad);
+}
+.aviso a{color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(250,242,236,.5);padding-bottom:2px}
+.aviso a:hover{border-bottom-color:var(--cream)}
+
+.barra-topo{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:24px;padding:22px var(--pad);
+  max-width:var(--wrap);margin:0 auto;
+}
+
+.marca{text-decoration:none;display:block;line-height:1.1}
+.marca b{
+  display:block;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-weight:400;font-size:24px;
+  text-transform:uppercase;letter-spacing:.16em;
+  white-space:nowrap;
+  color:#fff;transition:color .35s;
+}
+.marca span{
+  display:block;margin-top:5px;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:11px;text-transform:uppercase;letter-spacing:.24em;
+  color:rgba(255,255,255,.72);transition:color .35s;
+}
+.topo.solido .marca b{color:var(--ink)}
+.topo.solido .marca span{color:var(--ink-soft)}
+
+.nav{display:flex;align-items:center;gap:34px}
+.nav a{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:15px;text-transform:uppercase;letter-spacing:.18em;
+  text-decoration:none;color:#fff;
+  padding-bottom:4px;border-bottom:1px solid transparent;
+  transition:color .35s,border-color .32s;
+}
+.topo.solido .nav a{color:var(--ink)}
+.nav a:hover,.nav a:focus-visible{border-bottom-color:currentColor}
+
+/* ---------- hero ---------- */
+
+.hero{position:relative;height:100svh;min-height:560px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero picture,.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.hero img{animation:kenburns 24s ease-out forwards}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.08)}}
+
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(rgba(35,32,28,.34),rgba(35,32,28,.5));
+}
+
+.hero-in{position:relative;z-index:2;text-align:center;color:#fff;padding:0 24px;max-width:900px}
+.hero-in h1{color:#fff;animation:abre 1.4s cubic-bezier(.22,.61,.36,1) .3s both}
+@keyframes abre{from{letter-spacing:.26em;opacity:0}to{letter-spacing:.14em;opacity:1}}
+
+.hero-sub{
+  margin:22px 0 0;color:rgba(255,255,255,.88);font-size:22px;
+  animation:sobe 1.2s ease-out .9s both;
+}
+.hero-cta{margin-top:44px;animation:sobe 1.2s ease-out 1.15s both}
+@keyframes sobe{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+.chevron{
+  position:absolute;left:50%;bottom:34px;z-index:2;
+  transform:translateX(-50%);color:rgba(255,255,255,.8);
+  font-size:28px;line-height:1;text-decoration:none;
+  animation:desce 2.2s ease-in-out infinite;
+}
+@keyframes desce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
+
+/* hero interno das outras páginas */
+.capa{position:relative;height:62svh;min-height:380px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.capa picture,.capa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.capa::after{content:"";position:absolute;inset:0;background:rgba(35,32,28,.54)}
+.capa .hero-in h1{font-size:62px}
+
+/* ---------- seções ---------- */
+
+.sec{padding:var(--gap-sec) 0}
+section[id]{scroll-margin-top:110px}
+.sec--alt{background:var(--cream-alt)}
+.sec--olive{background:var(--olive);color:var(--cream)}
+.sec--olive h2{color:var(--cream)}
+
+.centro{text-align:center}
+.centro h2{max-width:620px;margin:0 auto}
+.centro .prose{margin:34px auto 0;text-align:left}
+
+.regua{width:140px;height:1px;background:var(--line);border:0;margin:0 auto 40px}
+.sec--olive .regua{background:rgba(250,242,236,.4)}
+
+/* ---------- banner de foto ---------- */
+
+.banner{position:relative;height:100svh;min-height:520px;display:flex;align-items:center;justify-content:center;overflow:hidden;text-align:center}
+.banner--curto{height:76svh;min-height:420px}
+.banner picture,.banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.banner::after{content:"";position:absolute;inset:0;background:rgba(35,32,28,.4)}
+.banner-in{position:relative;z-index:2;color:#fff;padding:0 24px;max-width:780px}
+.banner-in h2{color:#fff}
+.banner-in p{margin:20px 0 0;font-style:italic;font-size:22px;color:rgba(255,255,255,.9)}
+.banner-in .pill{margin-top:40px}
+
+/* ---------- serviços ---------- */
+
+.servico{
+  display:grid;grid-template-columns:1fr 1fr;
+  align-items:center;gap:70px;
+  padding:0 0 var(--gap-sec);
+}
+.servico:last-child{padding-bottom:0}
+.servico--inverso .servico-foto{order:2}
+.servico--inverso .servico-txt{order:1}
+
+.servico-foto{position:relative;overflow:hidden;background:var(--olive)}
+.servico-foto img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease-out}
+.servico-foto:hover img{transform:scale(1.04)}
+
+.servico-foto--alta{aspect-ratio:3/4;max-width:420px;width:100%;justify-self:center}
+.servico-foto--larga{aspect-ratio:4/3}
+
+/* quando não existe foto de prova, o lugar é resolvido com tipografia */
+.servico-nota{
+  display:flex;align-items:center;justify-content:center;
+  aspect-ratio:3/4;background:var(--olive);color:var(--cream);
+  padding:56px;text-align:center;
+}
+.servico-nota p{margin:0;font-style:italic;font-size:26px;line-height:1.5;font-family:"Cormorant Garamond",Georgia,serif}
+
+.servico-txt h3{margin-bottom:8px}
+.servico-txt .tag{
+  display:block;margin-bottom:18px;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
+}
+.servico-txt p{margin:0 0 30px;color:var(--ink-soft)}
+
+/* ---------- prova / formação ---------- */
+
+.dupla{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:start}
+.dupla figure{margin:0}
+.dupla figcaption{margin-top:14px;font-size:16px;color:var(--ink-soft);font-style:italic}
+
+/* ---------- faixa do instagram ---------- */
+
+.insta{text-align:center}
+.insta p{max-width:620px;margin:0 auto 38px;font-size:22px;color:rgba(250,242,236,.82)}
+.insta .arroba{
+  display:block;margin-bottom:12px;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  /* o @ tem 20 caracteres: em tela estreita o tamanho acompanha a largura,
+     senão o texto passa da borda mesmo sem gerar rolagem lateral */
+  font-size:clamp(17px,5.2vw,30px);letter-spacing:.12em;text-transform:uppercase;
+  overflow-wrap:anywhere;
+}
+
+/* ---------- localização ---------- */
+
+.local{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.local .mapa{aspect-ratio:21/9;border:1px solid var(--line);background:var(--cream)}
+.local .mapa iframe{width:100%;height:100%;border:0;display:block}
+.local address{font-style:normal;font-size:20px;line-height:1.8}
+.local .rotulo{
+  display:block;margin-bottom:10px;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
+}
+
+/* ---------- rodapé ---------- */
+
+.rodape{background:var(--ink);color:var(--cream);padding:80px 0 120px}
+.rodape a{color:var(--cream);text-decoration:none}
+.rodape-grade{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:50px}
+.rodape h3{font-size:18px;margin-bottom:18px;color:var(--cream)}
+.rodape p,.rodape li{color:rgba(250,242,236,.76);font-size:17px;line-height:1.8;margin:0}
+.rodape ul{list-style:none;padding:0;margin:0}
+.rodape li a:hover{border-bottom:1px solid rgba(250,242,236,.6)}
+.rodape .marca-pe{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:26px;text-transform:uppercase;letter-spacing:.16em;margin-bottom:14px;display:block;
+}
+
+/* ---------- barra fixa de ação (celular) ---------- */
+/* não é a bolinha verde: entra no fluxo, na cor do site */
+
+.acao{
+  display:none;
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:var(--ink);
+  border-top:1px solid rgba(250,242,236,.18);
+  padding:14px 18px calc(14px + env(safe-area-inset-bottom));
+}
+.acao a{
+  display:block;text-align:center;text-decoration:none;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:16px;text-transform:uppercase;letter-spacing:.18em;
+  color:var(--cream);border:1px solid rgba(250,242,236,.5);
+  border-radius:999px;padding:15px 20px;
+}
+
+/* ---------- reveal ---------- */
+/* a opacidade zero só existe quando o script está de pé: sem JS, nada some */
+
+.js .reveal{opacity:0;transform:translateY(16px)}
+.js .reveal.visivel{opacity:1;transform:none;transition:opacity .8s ease-out,transform .8s ease-out}
+
+/* ---------- responsivo ---------- */
+
+@media (max-width:1000px){
+  .servico,.dupla,.local{grid-template-columns:1fr;gap:38px}
+  .servico--inverso .servico-foto,.servico--inverso .servico-txt{order:0}
+  .rodape-grade{grid-template-columns:1fr 1fr}
+}
+
+@media (max-width:860px){
+  :root{--pad:24px;--gap-sec:80px}
+  h1{font-size:46px}
+  h2{font-size:32px}
+  body{font-size:18px;padding-bottom:82px}  /* a barra fixa não cobre o rodapé */
+  .lead,.hero-sub,.banner-in p,.insta p{font-size:19px}
+  .nav{gap:20px}
+  .nav a{font-size:13px;letter-spacing:.16em}   /* o tracking se mantém: sem ele o dialeto some */
+  .nav .some-no-mobile{display:none}
+  .marca b{font-size:20px}
+  .barra-topo{padding:16px var(--pad)}
+  .aviso{font-size:13px;letter-spacing:.14em;padding:8px var(--pad)}
+  .acao{display:block}
+  .chevron{bottom:96px}
+  .banner,.hero{min-height:520px}
+  .servico-nota{aspect-ratio:4/3;padding:36px}
+  .servico-nota p{font-size:21px}
+  .capa .hero-in h1{font-size:38px}
+  .rodape{padding:64px 0 90px}
+}
+
+@media (max-width:560px){
+  .marca b{font-size:17px;letter-spacing:.14em}
+  .marca span{font-size:10px;letter-spacing:.2em}
+  .rodape-grade{grid-template-columns:1fr;gap:34px}
+  h1{font-size:38px}
+  .pill{padding:16px 34px;font-size:15px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none}
+  .hero img{transform:none}
+}
