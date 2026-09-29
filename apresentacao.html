@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cíntia Godoy — Estética e Bem-Estar | Apresentação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+<style>
+/* Trocar só esta faixa: a paleta é a da marca do trabalho. */
+:root{
+  --fundo:#F4E9E0;
+  --cartao:#FAF2EC;
+  --tinta:#23201C;
+  --tinta-2:#5C554D;
+  --filete:#C9BCB0;
+  --acento:#B08A4F;
+  --painel:#524B3A;
+  --ui:"Inter",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;background:#8B949C;color:var(--tinta);font:400 16px/1.55 var(--ui);-webkit-font-smoothing:antialiased}
+
+.slide{
+  position:relative;width:1280px;height:720px;margin:0 auto 24px;padding:64px 72px;
+  background:var(--fundo);overflow:hidden;display:flex;flex-direction:column;
+}
+.slide:last-child{margin-bottom:0}
+
+.sobrelinha{margin:0 0 10px;font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--tinta-2)}
+.titulo{margin:0;font-size:48px;line-height:1.1;font-weight:300;letter-spacing:-.01em;max-width:22ch}
+.titulo strong{font-weight:600}
+.filete{height:1px;background:var(--filete);border:0;margin:24px 0 32px}
+.corpo{margin:0;font-size:18px;line-height:1.6;color:var(--tinta-2);max-width:62ch}
+.rodape{position:absolute;left:72px;right:72px;bottom:28px;display:flex;justify-content:space-between;font-size:12px;color:var(--tinta-2)}
+.rotulo{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-2)}
+.cartao{background:var(--cartao);border:1px solid var(--filete);border-radius:14px;padding:24px}
+.cartao--acento{background:var(--acento);border-color:var(--acento);color:#fff}
+.cartao--acento .rotulo,.cartao--acento p{color:rgba(255,255,255,.88)}
+
+/* 1. capa */
+.slide--capa{justify-content:flex-end;background:var(--painel);color:#fff}
+.slide--capa .capa-foto{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;opacity:.55}
+.slide--capa .capa-conteudo{position:relative}
+.slide--capa .titulo{font-size:64px;max-width:18ch;color:#fff}
+.slide--capa .ficha{position:relative;display:flex;gap:48px;margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.28)}
+.slide--capa .ficha div{min-width:140px}
+.slide--capa .ficha .rotulo{color:rgba(255,255,255,.66)}
+.slide--capa .ficha p{margin:4px 0 0;font-size:17px;color:#fff}
+
+/* 2. índice */
+.indice{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin:8px 0 0;padding:0;list-style:none}
+.indice li{display:flex;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--filete)}
+.indice .n{font-size:15px;font-weight:500;color:var(--tinta-2);min-width:28px}
+.indice .t{font-size:19px;font-weight:500}
+
+/* 3. abertura com imagem */
+.slide--agenda .colunas{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center;flex:1}
+.slide--agenda img{width:100%;height:100%;max-height:420px;object-fit:cover;border-radius:14px}
+
+/* 4. lista numerada */
+.lista{margin:0;padding:0;list-style:none;border-top:1px solid var(--filete)}
+.lista li{display:grid;grid-template-columns:72px 1fr 1.4fr;gap:24px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--filete)}
+.lista .n{font-size:38px;font-weight:300;color:var(--tinta-2)}
+.lista li:last-child .n{color:var(--acento)}
+.lista .t{font-size:24px;font-weight:600}
+.lista p{margin:0;font-size:16px;color:var(--tinta-2)}
+
+/* 5. números */
+.slide--kpis .colunas{display:grid;grid-template-columns:1fr 1fr;gap:56px;flex:1;align-items:center}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px;align-content:start}
+.kpi .v{margin:0;font-size:40px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.kpi .r{margin:4px 0 0;font-size:15px;font-weight:600}
+.kpi p{margin:4px 0 0;font-size:14px;color:var(--tinta-2)}
+.marcadores{margin:0;padding-left:18px;font-size:16px;color:var(--tinta-2)}
+.marcadores li{margin-bottom:8px}
+
+/* 6. gráfico */
+.slide--grafico .colunas{display:grid;grid-template-columns:1fr 1.35fr;gap:48px;flex:1;align-items:center}
+.slide--grafico .painel{background:var(--painel);border-radius:14px;padding:24px;height:100%;display:flex;align-items:center}
+.slide--grafico svg{width:100%;height:auto}
+
+/* 7. cartões com prova */
+.cartoes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;flex:1}
+.cartoes .cartao{display:flex;flex-direction:column}
+.cartoes img{width:100%;height:180px;object-fit:cover;border-radius:10px;margin-top:auto}
+.cartoes h3{margin:0 0 8px;font-size:20px}
+.cartoes p{margin:0 0 16px;font-size:14px;color:var(--tinta-2)}
+
+/* 8. duas colunas */
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:56px;flex:1}
+.duas h3{margin:0 0 14px;font-size:19px}
+
+/* 9. grade de fechamento */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:20px;flex:1}
+.grade h3{margin:0 0 8px;font-size:19px}
+.grade p{margin:0;font-size:14px;color:var(--tinta-2)}
+
+@media screen{
+  .slide{scroll-snap-align:start;outline:none}
+  html{scroll-snap-type:y proximity}
+}
+@media print{
+  @page{size:1280px 720px;margin:0}
+  html,body{background:#fff}
+  .slide{margin:0;break-after:page;page-break-after:always}
+}
+
+/* o acento da marca é claro demais para texto branco: sobre ele a tinta é que lê */
+.cartao--acento{color:var(--tinta)}
+.cartao--acento .rotulo,.cartao--acento p{color:rgba(35,32,28,.82)}
+.cartao--acento .rotulo{color:rgba(35,32,28,.66)}
+</style>
+</head>
+<body>
+
+<!-- 1. CAPA -->
+<section class="slide slide--capa" id="p1">
+  <div class="capa-conteudo">
+    <svg viewBox="0 0 64 64" width="46" height="46" aria-hidden="true" style="margin-bottom:28px">
+      <g fill="none" stroke="#B08A4F" stroke-width="2.2" stroke-linecap="round">
+        <path d="M20 52c0-20 6-33 24-40"/><path d="M44 12c2 20-5 32-24 40"/></g></svg>
+    <h1 class="titulo">Estética e bem-estar<br>em Mogi Mirim</h1>
+    <div class="ficha">
+      <div><span class="rotulo">Quem apresenta</span><p>Cíntia Godoy — Estética &amp; Bem-Estar</p></div>
+      <div><span class="rotulo">Data</span><p>Setembro de 2026</p></div>
+      <div><span class="rotulo">Para</span><p>Empresas, escolas e eventos</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. ABERTURA -->
+<section class="slide slide--agenda" id="p2">
+  <p class="sobrelinha">O problema que chega antes do intervalo</p>
+  <h2 class="titulo">A tensão do pescoço e dos ombros não espera o fim do expediente</h2>
+  <div class="colunas">
+    <div>
+      <p class="corpo">Jornada sentada, celular na mão, reunião atrás de reunião. O corpo
+      cobra no meio do dia — e quase nunca existe um lugar para resolver isso sem sair
+      do trabalho.</p>
+      <p class="corpo" style="margin-top:18px">Cíntia Godoy atende há anos em Mogi Mirim, na
+      Avenida Santo Antônio, 127. Faz o atendimento no espaço dela, com hora marcada, e leva
+      a cadeira de quick massage até empresas, escolas e eventos da região.</p>
+    </div>
+    <img src="assets/img/massagem.jpg?v=2" alt="Atendimento de massagem no pescoço e ombros">
+  </div>
+</section>
+
+<!-- 3. FORMAÇÃO -->
+<section class="slide slide--lista" id="p3">
+  <p class="sobrelinha">Quem atende você</p>
+  <h2 class="titulo">Cada técnica nova entra na sala depois de estudada</h2>
+  <ol class="lista">
+    <li><span class="n">01</span><h3>Lipedema e taping — Bioage, Rio Claro</h3><p>Atualização mais recente. Entra junto com a drenagem no cuidado de quem convive com
+      dor, peso e inchaço nas pernas.</p></li>
+    <li><span class="n">02</span><h3>BioMED — em formação</h3><p>Formação em andamento, que sustenta a leitura do que cada pele e cada corpo pedem
+      antes de escolher o protocolo.</p></li>
+    <li><span class="n">03</span><h3>Acrus e RenoveSSe Skin Glow</h3><p>Equipamento de depilação a laser de alta performance e protocolo de limpeza de pele
+      com luz biofotônica.</p></li>
+  </ol>
+</section>
+
+<!-- 4. O QUE FAZ -->
+<section class="slide slide--duas-colunas" id="p4">
+  <p class="sobrelinha">O que ela faz</p>
+  <h2 class="titulo">Dois lugares de atendimento: o espaço dela e o seu</h2>
+  <hr class="filete">
+  <div class="duas">
+    <div>
+      <h3>No espaço, com hora marcada</h3>
+      <ul class="marcadores">
+        <li>Drenagem linfática relaxante — o carro-chefe</li>
+        <li>Head spa — cabeça e couro cabeludo</li>
+        <li>Limpeza de pele biofotônica — RenoveSSe Skin Glow</li>
+        <li>Depilação a laser — equipamento Acrus</li>
+        <li>Massoterapia e cuidado no lipedema</li>
+      </ul>
+    </div>
+    <div>
+      <h3>No seu local, em cadeira</h3>
+      <ul class="marcadores">
+        <li>Quick massage em empresas</li>
+        <li>SIPAT e semana do bem-estar</li>
+        <li>Datas da equipe e confraternização</li>
+        <li>Feiras, congressos e eventos de escola</li>
+        <li>Mogi Mirim e região</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5. COMO FUNCIONA -->
+<section class="slide slide--cartoes" id="p5">
+  <p class="sobrelinha">Quick massage na empresa</p>
+  <h2 class="titulo">A cadeira vai até você; a empresa cede um canto e uma tomada</h2>
+  <div class="cartoes">
+    <div class="cartao"><span class="rotulo">Vai com ela</span>
+      <p>A cadeira de quick massage, os insumos, os descartáveis e o atendimento.
+      Sem óleo, sem troca de roupa e sem sala montada.</p></div>
+    <div class="cartao"><span class="rotulo">A empresa providencia</span>
+      <p>Um canto reservado ou uma sala, uma tomada por perto e a lista de horários.
+      Havendo escala, o atendimento se encaixa nos intervalos.</p></div>
+    <div class="cartao cartao--acento"><span class="rotulo">Entra na cotação</span>
+      <p>A duração de cada atendimento e quantas pessoas cabem no período — combinado
+      antes, nunca no dia.</p></div>
+  </div>
+</section>
+
+<!-- 6. ONDE ENTRA -->
+<section class="slide slide--lista" id="p6">
+  <p class="sobrelinha">Ocasiões</p>
+  <h2 class="titulo">Entra na data que a empresa já tem no calendário</h2>
+  <ol class="lista">
+    <li><span class="n">01</span><h3>SIPAT</h3><p>A semana de prevenção precisa de uma atração que as pessoas queiram fazer — e que
+      fale de saúde sem palestra.</p></li>
+    <li><span class="n">02</span><h3>Semana do bem-estar e datas da equipe</h3><p>Qualidade de vida, saúde mental, ergonomia, Dia da Mulher, Outubro Rosa,
+      aniversário da empresa, confraternização.</p></li>
+    <li><span class="n">03</span><h3>Feiras, congressos e eventos de escola</h3><p>No estande, a cadeira vira ponto de parada — e motivo para a pessoa voltar.</p></li>
+  </ol>
+</section>
+
+<!-- 7. PROVA -->
+<section class="slide slide--agenda" id="p7">
+  <p class="sobrelinha">O maior evento até aqui</p>
+  <h2 class="titulo">160 pessoas atendidas em um evento escolar de Mogi Mirim</h2>
+  <div class="colunas">
+    <div>
+      <p class="corpo"><strong>160 pessoas</strong> — o convite veio de uma escola da cidade
+      em setembro de 2026. É a escala que a operação suporta quando a fila é organizada por
+      horário.</p>
+      <p class="corpo" style="margin-top:18px">Eventos são parte do trabalho dela há anos e
+      quase nunca foram divulgados: a agenda sempre veio de indicação. Esta apresentação
+      existe para mudar isso.</p>
+      <p class="corpo" style="margin-top:18px">Mais de 4.700 pessoas acompanham o trabalho no
+      Instagram <strong>@cintiagodoyestetica</strong> — é de lá e do Google que chega a
+      maior parte de quem procura.</p>
+    </div>
+    <img src="assets/img/cintia.jpg?v=2" alt="Retrato de Cíntia Godoy">
+  </div>
+</section>
+
+<!-- 8. PRÓXIMOS PASSOS -->
+<section class="slide slide--grade" id="p8">
+  <p class="sobrelinha">Como contratar</p>
+  <h2 class="titulo">Três informações e a proposta sai na mesma conversa</h2>
+  <div class="grade">
+    <div class="cartao"><span class="rotulo">Passo 1</span><p>Quantas pessoas serão atendidas.</p></div>
+    <div class="cartao"><span class="rotulo">Passo 2</span><p>A data (ou o mês) e o horário disponível.</p></div>
+    <div class="cartao"><span class="rotulo">Passo 3</span><p>A cidade e o endereço do atendimento.</p></div>
+    <div class="cartao cartao--acento"><span class="rotulo">WhatsApp</span><p>(19) 97410-8030</p></div>
+    <div class="cartao"><span class="rotulo">Espaço</span><p>Av. Santo Antônio, 127 — Centro, Mogi Mirim, SP</p></div>
+    <div class="cartao"><span class="rotulo">Site e Instagram</span><p>cintia-godoy.onrender.com · @cintiagodoyestetica</p></div>
+  </div>
+</section>
+
+</body>
+</html>

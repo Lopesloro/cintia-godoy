@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Catálogo de serviços — Cíntia Godoy Estética e Bem-Estar</title>
+<meta name="description" content="Catálogo de serviços de Cíntia Godoy — estética e bem-estar em Mogi Mirim: drenagem linfática, head spa, limpeza de pele, depilação a laser, lipedema e quick massage para empresas.">
+<link rel="canonical" href="https://cintia-godoy.onrender.com/catalogo.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* Catálogo — feito para virar PDF e ser enviado no WhatsApp.
+   Estilo embutido de propósito: o arquivo tem que imprimir sozinho. */
+:root{
+  --cream:#FAF2EC; --cream-alt:#F4E9E0; --ink:#23201C; --ink-soft:#5C554D;
+  --gold:#B08A4F; --olive:#524B3A; --line:#C9BCB0;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;background:#8B857C}
+body{font-family:"EB Garamond",Georgia,serif;color:var(--ink);font-size:11pt;line-height:1.6}
+
+.folha{
+  width:210mm;min-height:297mm;margin:0 auto 14px;background:var(--cream);
+  padding:22mm 20mm;position:relative;display:flex;flex-direction:column;
+}
+.folha--capa{background:var(--olive);color:var(--cream);justify-content:space-between;padding:26mm 20mm}
+
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;
+  text-transform:uppercase;letter-spacing:.14em;line-height:1.22;margin:0}
+h1{font-size:34pt}
+h2{font-size:17pt;margin-bottom:6mm}
+h3{font-size:12.5pt;font-weight:400;letter-spacing:.1em}
+
+.marca-cat{display:flex;align-items:center;gap:9mm}
+.marca-cat b{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;
+  font-size:16pt;text-transform:uppercase;letter-spacing:.17em;line-height:1}
+.marca-cat i{display:block;margin-top:2.4mm;font-family:"Cormorant Garamond",Georgia,serif;
+  font-style:normal;font-size:7.5pt;text-transform:uppercase;letter-spacing:.3em;opacity:.75}
+
+.capa-fim{border-top:1px solid rgba(250,242,236,.34);padding-top:7mm;
+  display:flex;justify-content:space-between;align-items:flex-end;gap:10mm}
+.capa-fim p{margin:0;font-size:10.5pt;color:rgba(250,242,236,.86)}
+.rotulo{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:7.5pt;
+  text-transform:uppercase;letter-spacing:.22em;color:var(--gold);margin-bottom:2mm}
+.folha--capa .rotulo{color:rgba(250,242,236,.6)}
+
+.intro{font-size:11.5pt;color:var(--ink-soft);max-width:150mm;margin:0 0 10mm}
+
+.item{display:grid;grid-template-columns:1fr 34mm;gap:8mm;align-items:baseline;
+  padding:6.5mm 0;border-top:1px solid var(--line)}
+.item:last-of-type{border-bottom:1px solid var(--line)}
+.item p{margin:2.2mm 0 0;font-size:10pt;color:var(--ink-soft)}
+.item .tag{display:block;font-family:"Cormorant Garamond",Georgia,serif;font-size:7.5pt;
+  text-transform:uppercase;letter-spacing:.2em;color:var(--gold);margin-bottom:1.6mm}
+.preco{font-family:"Cormorant Garamond",Georgia,serif;font-size:14pt;text-align:right;white-space:nowrap}
+.preco small{display:block;font-size:7.5pt;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:1mm}
+
+.bloco{background:var(--cream-alt);padding:9mm;margin-top:9mm}
+.bloco ol{margin:0;padding-left:5mm;font-size:10.5pt}
+.bloco p{margin:0 0 3mm}
+
+.pe{margin-top:auto;padding-top:8mm;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:8mm;font-size:9.5pt;color:var(--ink-soft)}
+.pe a{color:var(--ink-soft);text-decoration:none}
+
+.aviso-tela{max-width:210mm;margin:14px auto;padding:10px 14px;background:#23201C;color:#FAF2EC;
+  font-size:10pt;text-align:center}
+.aviso-tela a{color:#DCC79A}
+
+@media print{
+  html,body{background:#fff}
+  .aviso-tela{display:none}
+  .folha{margin:0;page-break-after:always}
+  .folha:last-of-type{page-break-after:auto}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<div class="aviso-tela">
+  Esta é a versão em tela do catálogo. Para enviar no WhatsApp, use o PDF:
+  <a href="catalogo-cintia-godoy.pdf">baixar o catálogo em PDF</a>.
+</div>
+
+<!-- FOLHA 1 — CAPA -->
+<section class="folha folha--capa">
+  <div class="marca-cat">
+    <svg viewBox="0 0 64 64" width="42" height="42" aria-hidden="true">
+      <g fill="none" stroke="#B08A4F" stroke-width="2" stroke-linecap="round">
+        <path d="M20 52c0-20 6-33 24-40"/><path d="M44 12c2 20-5 32-24 40"/>
+      </g>
+    </svg>
+    <span><b>Cíntia Godoy</b><i>Estética &amp; Bem-Estar</i></span>
+  </div>
+
+  <div>
+    <span class="rotulo">Catálogo de serviços</span>
+    <h1>Estética,<br>bem-estar<br>e uma hora<br>que é sua</h1>
+  </div>
+
+  <div class="capa-fim">
+    <p>Avenida Santo Antônio, 127 — Centro<br>Mogi Mirim, São Paulo</p>
+    <p style="text-align:right">(19) 97410-8030<br>@cintiagodoyestetica</p>
+  </div>
+</section>
+
+<!-- FOLHA 2 — ATENDIMENTOS -->
+<section class="folha">
+  <div>
+    <span class="rotulo">No espaço, com hora marcada</span>
+    <h2>Atendimentos</h2>
+    <p class="intro">Cada atendimento tem o tempo que precisa ter. O agendamento é feito
+    pelo WhatsApp, e a avaliação do que a sua pele ou o seu corpo pedem acontece na
+    primeira sessão.</p>
+  </div>
+
+  <div class="item">
+    <div><span class="tag">O carro-chefe</span><h3>Drenagem linfática relaxante</h3>
+      <p>Manobras lentas, na velocidade em que a linfa circula. Não é massagem forte e não
+      precisa doer. Desincha, alivia o peso das pernas e solta a tensão do pescoço e dos ombros.</p></div>
+    <div class="preco"><small>a partir de</small>—</div>
+  </div>
+
+  <div class="item">
+    <div><span class="tag">Cabeça e couro cabeludo</span><h3>Head spa</h3>
+      <p>Higienização profunda e massagem do couro cabeludo, com água morna e óleos, feitas
+      devagar. Existe uma diferença entre descansar e realmente desligar.</p></div>
+    <div class="preco"><small>a partir de</small>—</div>
+  </div>
+
+  <div class="item">
+    <div><span class="tag">Protocolo RenoveSSe Skin Glow</span><h3>Limpeza de pele biofotônica</h3>
+      <p>Higienização, extração, ativos e luz biofotônica no mesmo protocolo. A pele sai limpa
+      e descansada — não vermelha e não irritada.</p></div>
+    <div class="preco"><small>a partir de</small>—</div>
+  </div>
+
+  <div class="item">
+    <div><span class="tag">Equipamento Acrus</span><h3>Depilação a laser</h3>
+      <p>Pele lisa e uniforme, tratamento seguro, resultados reais. De tempos em tempos a
+      agenda abre um Laser Day, com data reservada só para isso.</p></div>
+    <div class="preco"><small>por sessão</small>—</div>
+  </div>
+
+  <div class="item">
+    <div><span class="tag">Atualização Bioage</span><h3>Massoterapia e cuidado no lipedema</h3>
+      <p>Massoterapia e técnica de taping para lipedema. Para quem convive com dor, peso e
+      inchaço nas pernas e já ouviu que bastava emagrecer.</p></div>
+    <div class="preco"><small>a partir de</small>—</div>
+  </div>
+
+  <div class="pe">
+    <span>Cíntia Godoy — Estética &amp; Bem-Estar</span>
+    <span>Agendamento: (19) 97410-8030</span>
+  </div>
+</section>
+
+<!-- FOLHA 3 — EMPRESAS -->
+<section class="folha">
+  <div>
+    <span class="rotulo">Fora do espaço, no seu local</span>
+    <h2>Quick massage para empresas e eventos</h2>
+    <p class="intro">Massagem feita em cadeira própria, com a pessoa vestida, sem óleo e sem
+    troca de roupa. Pescoço, ombros, costas e braços — onde a jornada sentada cobra.
+    A cadeira, os insumos e a profissional vão até o local.</p>
+  </div>
+
+  <div class="item">
+    <div><h3>SIPAT e semana do bem-estar</h3>
+      <p>Uma atração que as pessoas de fato querem fazer, e que fala de saúde sem palestra.</p></div>
+    <div class="preco"><small>cotação</small>—</div>
+  </div>
+  <div class="item">
+    <div><h3>Datas da equipe</h3>
+      <p>Dia da Mulher, Outubro Rosa, aniversário da empresa, confraternização de fim de ano.</p></div>
+    <div class="preco"><small>cotação</small>—</div>
+  </div>
+  <div class="item">
+    <div><h3>Feiras, congressos e eventos</h3>
+      <p>Estande, formatura, evento de escola. Em setembro de 2026 foram 160 pessoas em um
+      evento escolar em Mogi Mirim.</p></div>
+    <div class="preco"><small>cotação</small>—</div>
+  </div>
+
+  <div class="bloco">
+    <p><strong>Para receber a proposta, três informações:</strong></p>
+    <ol>
+      <li>Quantas pessoas serão atendidas</li>
+      <li>A data (ou o mês) e o horário disponível</li>
+      <li>A cidade e o endereço do atendimento</li>
+    </ol>
+    <p style="margin-top:4mm">A empresa providencia um canto reservado e uma tomada.
+    O resto vai com ela.</p>
+  </div>
+
+  <div class="pe">
+    <span>cintia-godoy.onrender.com</span>
+    <span>(19) 97410-8030 — @cintiagodoyestetica</span>
+  </div>
+</section>
+
+</body>
+</html>
