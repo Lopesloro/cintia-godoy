@@ -129,7 +129,10 @@ em{font-style:italic}
   max-width:var(--wrap);margin:0 auto;
 }
 
-.marca{text-decoration:none;display:block;line-height:1.1}
+.marca{text-decoration:none;display:block;line-height:1.1;color:#fff}
+.topo.solido .marca{color:var(--ink)}
+.marca-sim{display:none}   /* em tela estreita a marca vira só o símbolo */
+.marca>.marca-sim{color:inherit}   /* o símbolo segue a cor do header, não a da assinatura */
 .marca b{
   display:block;
   font-family:"Cormorant Garamond",Georgia,serif;
@@ -210,6 +213,26 @@ em{font-style:italic}
 .capa picture,.capa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .capa::after{content:"";position:absolute;inset:0;background:rgba(35,32,28,.54)}
 .capa .hero-in h1{font-size:62px}
+
+/* capa sem foto — usada quando não há registro real para aquela página */
+.capa--solida{background:var(--olive);color:var(--cream)}
+.capa--solida::after{display:none}
+.capa--solida .hero-in h1,.capa--solida .hero-sub{color:var(--cream)}
+.capa--solida .hero-sub{color:rgba(250,242,236,.82)}
+
+/* ocasiões: lista editorial em duas colunas, separada por filete —
+   não é grade de cartão com ícone, que o padrão proíbe */
+.ocasioes{display:grid;grid-template-columns:1fr 1fr;gap:0 70px}
+.ocasioes>div{padding:30px 0;border-top:1px solid rgba(250,242,236,.28)}
+.ocasioes h3{color:var(--cream);margin-bottom:10px}
+.ocasioes p{margin:0;color:rgba(250,242,236,.78);font-size:18px}
+
+/* ficha de cotação */
+.ficha{border:1px solid var(--line);padding:38px}
+.ficha .rotulo{display:block;margin-bottom:18px;font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.ficha ol{margin:0 0 22px;padding-left:20px;font-size:19px;line-height:1.9}
+.ficha-nota{margin:0 0 28px;font-style:italic;color:var(--ink-soft)}
 
 /* ---------- seções ---------- */
 
@@ -325,6 +348,8 @@ section[id]{scroll-margin-top:110px}
 /* ---------- responsivo ---------- */
 
 @media (max-width:1000px){
+  .ocasioes{grid-template-columns:1fr;gap:0}
+
   .servico,.dupla,.local{grid-template-columns:1fr;gap:38px}
   .servico--inverso .servico-foto,.servico--inverso .servico-txt{order:0}
   .rodape-grade{grid-template-columns:1fr 1fr}
@@ -390,10 +415,15 @@ section[id]{scroll-margin-top:110px}
   /* no aparelho mais estreito o link de Sobre sai do topo — continua no rodapé
      e dentro da home. O que não pode sair é o botão de agendar. */
   .nav a[href="sobre.html"]{display:none}
-  .marca span{display:none}
+  .marca>span:not(.marca-sim){display:none}
 }
 
 @media (max-width:430px){
+  /* com quatro itens no menu o nome por extenso não cabe em 360px:
+     a marca passa a ser o símbolo, que é para isso que ele existe */
+  .marca-sim{display:block}
+  .marca b,.marca>span:not(.marca-sim){display:none}
+
   /* em 360px o rótulo do botão quebrava em duas linhas e empurrava o bloco
      do hero para fora da tela curta. O texto continua inteiro, só menor. */
   .hero .pill--claro{font-size:13px;letter-spacing:.14em;padding:14px 26px;white-space:nowrap}

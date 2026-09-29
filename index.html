@@ -21,13 +21,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="assets/app.css?v=14">
+<link rel="stylesheet" href="assets/app.css?v=18">
 <script>
 /* o opacity:0 do reveal só entra se o observador existir — e sai sozinho se o script falhar */
 (function(){var h=document.documentElement;if('IntersectionObserver'in window){h.className+=' js';
 setTimeout(function(){if(h.dataset.revealOk!=='1')h.className=h.className.replace(' js','');},2500);}})();
 </script>
-<script src="assets/app.js?v=14" defer></script>
+<script src="assets/app.js?v=18" defer></script>
 
 <script type="application/ld+json">
 {
@@ -60,12 +60,14 @@ setTimeout(function(){if(h.dataset.revealOk!=='1')h.className=h.className.replac
   </div>
   <div class="barra-topo">
     <a class="marca" href="/">
+      <span class="marca-sim" aria-hidden="true"><svg viewBox="0 0 64 64" width="26" height="26"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 52c0-20 6-33 24-40"/><path d="M44 12c2 20-5 32-24 40"/></g></svg></span>
       <b>Cíntia Godoy</b>
       <span>Estética e Bem-Estar</span>
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="servicos.html">Serviços</a>
-      <a href="sobre.html">Sobre</a>
+      <a href="empresas.html">Empresas</a>
+      <a class="some-no-mobile" href="sobre.html">Sobre</a>
       <a class="some-no-mobile" href="https://www.instagram.com/cintiagodoyestetica/" target="_blank" rel="noopener">Instagram</a>
       <a class="zap" href="https://wa.me/5519974108030?text=Oi%2C%20C%C3%ADntia%21%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." aria-label="Agendar pelo WhatsApp">WhatsApp</a>
     </nav>
@@ -313,6 +315,8 @@ setTimeout(function(){if(h.dataset.revealOk!=='1')h.className=h.className.replac
       <h3>Navegar</h3>
       <ul>
         <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="empresas.html">Empresas</a></li>
+        <li><a href="empresas.html">Empresas</a></li>
         <li><a href="sobre.html">Sobre</a></li>
         <li><a href="https://www.instagram.com/cintiagodoyestetica/" target="_blank" rel="noopener">Instagram</a></li>
       </ul>

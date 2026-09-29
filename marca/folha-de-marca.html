@@ -1,0 +1,44 @@
+<!doctype html><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FAF2EC;--ink:#23201C;--gold:#B08A4F;--olive:#524B3A;--line:#C9BCB0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 14px/1.6 "Cormorant Garamond",Georgia,serif;padding:56px}
+h4{font-weight:400;text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:#8b8177;margin:0 0 18px}
+.grade{display:grid;grid-template-columns:repeat(2,1fr);gap:56px;max-width:1000px}
+.cx{border:1px solid var(--line);padding:40px;display:flex;align-items:center;justify-content:center;min-height:190px;background:var(--cream)}
+.cx--escuro{background:var(--ink)}
+.lock{display:flex;align-items:center;gap:18px}
+.lock--emp{flex-direction:column;gap:14px;text-align:center}
+.nome{font-weight:400;text-transform:uppercase;letter-spacing:.17em;font-size:26px;line-height:1;white-space:nowrap}
+.tag{display:block;margin-top:8px;font-size:9.5px;letter-spacing:.34em;text-transform:uppercase;color:#7d7368}
+.cx--escuro .nome{color:var(--cream)} .cx--escuro .tag{color:rgba(250,242,236,.6)}
+.cx--escuro svg *{stroke:var(--cream)!important}
+.tinta svg *{stroke:var(--ink)!important} .tinta .tag{color:#6b6257}
+svg{display:block}
+</style>
+<div class="grade">
+  <div><h4>A · folha com nervura — horizontal</h4><div class="cx"><div class="lock">
+    <svg viewBox="0 0 64 64" width="52" height="52"><g fill="none" stroke="#B08A4F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M32 7c11.5 11.2 13.2 28.4 0 50C18.8 35.4 20.5 18.2 32 7Z"/><path d="M32 57c-.8-15.4-.6-31.2 0-50"/><path d="M32 26c3.9-1.7 7-4.4 9.2-8"/><path d="M32 38c-4-1.8-7.2-4.6-9.4-8.3"/></g></svg>
+    <span><span class="nome">Cíntia Godoy</span><span class="tag">Estética &amp; Bem-Estar</span></span></div></div></div>
+
+  <div><h4>B · traço aberto — horizontal</h4><div class="cx"><div class="lock">
+    <svg viewBox="0 0 64 64" width="52" height="52"><g fill="none" stroke="#B08A4F" stroke-width="1.6" stroke-linecap="round"><path d="M20 52c0-20 6-33 24-40"/><path d="M44 12c2 20-5 32-24 40"/></g></svg>
+    <span><span class="nome">Cíntia Godoy</span><span class="tag">Estética &amp; Bem-Estar</span></span></div></div></div>
+
+  <div><h4>A · empilhada</h4><div class="cx"><div class="lock lock--emp">
+    <svg viewBox="0 0 64 64" width="46" height="46"><g fill="none" stroke="#B08A4F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M32 7c11.5 11.2 13.2 28.4 0 50C18.8 35.4 20.5 18.2 32 7Z"/><path d="M32 57c-.8-15.4-.6-31.2 0-50"/><path d="M32 26c3.9-1.7 7-4.4 9.2-8"/><path d="M32 38c-4-1.8-7.2-4.6-9.4-8.3"/></g></svg>
+    <span><span class="nome">Cíntia Godoy</span><span class="tag">Estética &amp; Bem-Estar</span></span></div></div></div>
+
+  <div><h4>B · empilhada</h4><div class="cx"><div class="lock lock--emp">
+    <svg viewBox="0 0 64 64" width="46" height="46"><g fill="none" stroke="#B08A4F" stroke-width="1.6" stroke-linecap="round"><path d="M20 52c0-20 6-33 24-40"/><path d="M44 12c2 20-5 32-24 40"/></g></svg>
+    <span><span class="nome">Cíntia Godoy</span><span class="tag">Estética &amp; Bem-Estar</span></span></div></div></div>
+
+  <div><h4>A · sobre fundo escuro</h4><div class="cx cx--escuro"><div class="lock">
+    <svg viewBox="0 0 64 64" width="52" height="52"><g fill="none" stroke="#B08A4F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M32 7c11.5 11.2 13.2 28.4 0 50C18.8 35.4 20.5 18.2 32 7Z"/><path d="M32 57c-.8-15.4-.6-31.2 0-50"/><path d="M32 26c3.9-1.7 7-4.4 9.2-8"/><path d="M32 38c-4-1.8-7.2-4.6-9.4-8.3"/></g></svg>
+    <span><span class="nome">Cíntia Godoy</span><span class="tag">Estética &amp; Bem-Estar</span></span></div></div></div>
+
+  <div><h4>A · uma cor só (tinta)</h4><div class="cx tinta"><div class="lock">
+    <svg viewBox="0 0 64 64" width="52" height="52"><g fill="none" stroke="#B08A4F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M32 7c11.5 11.2 13.2 28.4 0 50C18.8 35.4 20.5 18.2 32 7Z"/><path d="M32 57c-.8-15.4-.6-31.2 0-50"/><path d="M32 26c3.9-1.7 7-4.4 9.2-8"/><path d="M32 38c-4-1.8-7.2-4.6-9.4-8.3"/></g></svg>
+    <span><span class="nome">Cíntia Godoy</span><span class="tag">Estética &amp; Bem-Estar</span></span></div></div></div>
+</div>
