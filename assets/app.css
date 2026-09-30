@@ -295,7 +295,8 @@ section[id]{scroll-margin-top:110px}
   font-family:"Cormorant Garamond",Georgia,serif;
   font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
 }
-.servico-txt p{margin:0 0 30px;color:var(--ink-soft)}
+.servico-txt p{margin:0 0 18px;color:var(--ink-soft)}
+.servico-txt p:last-of-type{margin-bottom:30px}
 
 /* ---------- prova / formação ---------- */
 
