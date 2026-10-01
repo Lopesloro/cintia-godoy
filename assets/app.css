@@ -280,6 +280,8 @@ section[id]{scroll-margin-top:110px}
 
 .servico-foto--alta{aspect-ratio:3/4;max-width:420px;width:100%;justify-self:center}
 .servico-foto--larga{aspect-ratio:4/3}
+/* peça da marca no lugar da foto: o zoom do hover cortaria o texto da arte */
+.servico-foto--arte:hover img{transform:none}
 
 /* quando não existe foto de prova, o lugar é resolvido com tipografia */
 .servico-nota{
