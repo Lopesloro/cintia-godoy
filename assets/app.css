@@ -280,8 +280,8 @@ section[id]{scroll-margin-top:110px}
 }
 .banner picture,.banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .banner::after{content:"";position:absolute;inset:0;background:rgba(35,32,28,.4)}
-/* foto de fundo clara: o veu padrao de 40% nao sustenta texto branco */
-.banner--escuro::after{background:rgba(35,32,28,.62)}
+/* faixa so de foto, sem texto por cima: o veu so escureceria a imagem */
+.banner--limpa::after{display:none}
 .banner-in{position:relative;z-index:2;color:#fff;padding:0 24px;max-width:780px}
 .banner-in h2{color:#fff}
 .banner-in p{margin:20px 0 0;font-style:italic;font-size:22px;color:rgba(255,255,255,.9)}
@@ -328,6 +328,8 @@ section[id]{scroll-margin-top:110px}
 
 .dupla{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:start}
 .dupla figure{margin:0}
+/* foto a esquerda no desktop; no celular a ordem do HTML volta, texto antes da foto */
+.dupla--inversa figure{order:-1}
 .dupla figcaption{margin-top:14px;font-size:16px;color:var(--ink-soft);font-style:italic}
 
 /* galeria do espaço: duas colunas com alturas diferentes e um degrau
@@ -403,6 +405,7 @@ section[id]{scroll-margin-top:110px}
   .ocasioes{grid-template-columns:1fr;gap:0}
 
   .servico,.dupla,.local{grid-template-columns:1fr;gap:38px}
+  .dupla--inversa figure{order:0}
   .servico--inverso .servico-foto,.servico--inverso .servico-txt{order:0}
   .rodape-grade{grid-template-columns:1fr 1fr}
 }

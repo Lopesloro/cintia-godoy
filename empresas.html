@@ -20,12 +20,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="assets/app.css?v=38">
+<link rel="stylesheet" href="assets/app.css?v=40">
 <script>
 (function(){var h=document.documentElement;if('IntersectionObserver'in window){h.className+=' js';
 setTimeout(function(){if(h.dataset.revealOk!=='1')h.className=h.className.replace(' js','');},2500);}})();
 </script>
-<script src="assets/app.js?v=38" defer></script>
+<script src="assets/app.js?v=40" defer></script>
 
 <script type="application/ld+json">
 {
@@ -75,17 +75,28 @@ setTimeout(function(){if(h.dataset.revealOk!=='1')h.className=h.className.replac
   </section>
 
   <!-- O QUE É -->
-  <section class="sec centro">
-    <div class="wrap reveal">
-      <h2>Uma pausa de verdade, dentro do expediente</h2>
-      <div class="prose">
-        <p>Quick massage é a massagem feita em <strong>cadeira própria</strong>, com a pessoa
-        vestida, sem óleo e sem precisar de sala reservada nem de troca de roupa. Pescoço,
-        ombros, costas e braços, exatamente onde a jornada sentada e o celular cobram.</p>
-        <p>Cíntia atende empresas em Mogi Mirim e região. A cadeira, os insumos e a
-        profissional vão até o local: a empresa só precisa ceder um canto tranquilo e uma
-        tomada por perto.</p>
+  <section class="sec">
+    <div class="wrap dupla reveal">
+      <div>
+        <h2>Uma pausa de verdade, dentro do expediente</h2>
+        <hr class="regua" style="margin-left:0">
+        <div class="prose">
+          <p>Quick massage é a massagem feita em <strong>cadeira própria</strong>, com a pessoa
+          vestida, sem óleo e sem precisar de sala reservada nem de troca de roupa. Pescoço,
+          ombros, costas e braços, exatamente onde a jornada sentada e o celular cobram.</p>
+          <p>Cíntia atende empresas em Mogi Mirim e região. A cadeira, os insumos e a
+          profissional vão até o local: a empresa só precisa ceder um canto tranquilo e uma
+          tomada por perto.</p>
+        </div>
       </div>
+      <figure>
+        <picture>
+          <source srcset="assets/img/corp-gym.webp?v=39" type="image/webp">
+          <img src="assets/img/corp-gym.jpg?v=39" width="1300" height="975" loading="lazy"
+               alt="Cadeira de quick massage montada dentro de uma academia, durante um atendimento">
+        </picture>
+        <figcaption>A cadeira montada no espaço do cliente.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -138,7 +149,7 @@ setTimeout(function(){if(h.dataset.revealOk!=='1')h.className=h.className.replac
   </section>
 
   <!-- BANNER -->
-  <section class="banner banner--curto banner--escuro">
+  <section class="banner banner--curto banner--limpa">
     <picture>
       <source media="(max-width:860px)" srcset="assets/img/quick-cadeira-p.webp?v=35" type="image/webp">
       <source media="(max-width:860px)" srcset="assets/img/quick-cadeira-p.jpg?v=35">
@@ -146,26 +157,32 @@ setTimeout(function(){if(h.dataset.revealOk!=='1')h.className=h.className.replac
       <img src="assets/img/quick-cadeira.jpg?v=36" width="1600" height="762" loading="lazy"
            alt="Cíntia Godoy ao lado da cadeira de quick massage e do banner do serviço">
     </picture>
-    <div class="banner-in">
-      <h2>Quem sai da cadeira volta para o dia diferente</h2>
-    </div>
   </section>
 
   <!-- EVENTOS -->
   <section class="sec sec--alt">
-    <div class="wrap reveal">
-      <div class="centro" style="margin-bottom:48px">
+    <div class="wrap dupla dupla--inversa reveal">
+      <div>
         <h2>Eventos</h2>
-        <p class="lead">O atendimento em evento é o mesmo, na escala do evento: mais gente,
-        menos tempo por pessoa, fila organizada por horário.</p>
+        <hr class="regua" style="margin-left:0">
+        <div class="prose">
+          <p>O atendimento em evento é o mesmo, na escala do evento: mais gente, menos tempo
+          por pessoa, fila organizada por horário.</p>
+          <p>Em setembro de 2026 uma escola de Mogi Mirim chamou Cíntia para um evento de
+          <strong>160 pessoas</strong>. É o tipo de trabalho que ela faz há anos e quase nunca
+          divulgou: a agenda de eventos dela sempre veio de indicação.</p>
+          <p>Se a sua empresa, escola ou associação está montando uma data assim, o caminho é o
+          mesmo da cotação: número de pessoas, data e local.</p>
+        </div>
       </div>
-      <div class="prose" style="margin:0 auto">
-        <p>Em setembro de 2026 uma escola de Mogi Mirim chamou Cíntia para um evento de
-        <strong>160 pessoas</strong>. É o tipo de trabalho que ela faz há anos e quase nunca
-        divulgou: a agenda de eventos dela sempre veio de indicação.</p>
-        <p>Se a sua empresa, escola ou associação está montando uma data assim, o caminho é o
-        mesmo da cotação: número de pessoas, data e local.</p>
-      </div>
+      <figure>
+        <picture>
+          <source srcset="assets/img/corp-evento.webp?v=39" type="image/webp">
+          <img src="assets/img/corp-evento.jpg?v=39" width="1200" height="1600" loading="lazy"
+               alt="Cíntia Godoy atendendo em cadeira durante um evento">
+        </picture>
+        <figcaption>Atendimento em cadeira durante um evento.</figcaption>
+      </figure>
     </div>
   </section>
 
