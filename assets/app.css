@@ -396,30 +396,32 @@ section[id]{scroll-margin-top:110px}
 
 /* ---------- rodapé ---------- */
 
-.rodape{background:var(--ink);color:var(--cream);padding:80px 0 120px}
+.rodape{background:var(--ink);color:var(--cream);padding:80px 0 72px}
 .rodape a{color:var(--cream);text-decoration:none}
 .rodape-grade{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:50px}
 .rodape h3{font-size:18px;margin-bottom:18px;color:var(--cream)}
 .rodape p,.rodape li{color:rgba(250,242,236,.76);font-size:17px;line-height:1.8;margin:0}
 .rodape ul{list-style:none;padding:0;margin:0}
 .rodape li a:hover{border-bottom:1px solid rgba(250,242,236,.6)}
-/* assinatura de quem fez o site, discreta, no fim do rodape */
+/* assinatura de quem fez o site: faixa clara propria no pe da pagina, porque a
+   marca da BlueShieldPro e preta e sumiria sobre o rodape escuro */
 .assina{
-  max-width:var(--wrap);margin:64px auto 0;
-  padding:30px var(--pad) 0;border-top:1px solid rgba(250,242,236,.16);
-  display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+  background:var(--cream-alt);
+  padding:40px var(--pad) 44px;
+  display:flex;justify-content:center;text-align:center;
 }
+.assina a{
+  display:inline-flex;flex-direction:column;align-items:center;gap:16px;
+  padding:10px 16px;margin:-10px -16px;
+  color:var(--ink-soft);text-decoration:none;
+  transition:opacity .3s ease;
+}
+.assina a:hover,.assina a:focus-visible{opacity:.66}
 .assina span{
   font-family:"Cormorant Garamond",Georgia,serif;
-  font-size:12px;letter-spacing:.22em;text-transform:uppercase;
-  color:rgba(250,242,236,.56);
+  font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-soft);
 }
-/* a marca tem 19px de altura: o preenchimento negativo cresce o alvo de toque
-   ate 45px sem mexer no desenho */
-.assina a{display:inline-flex;align-items:center;padding:13px 8px;margin:-13px -8px;
-  opacity:.78;transition:opacity .3s ease}
-.assina a:hover,.assina a:focus-visible{opacity:1}
-.assina img{display:block;width:auto;height:19px}
+.assina img{display:block;width:auto;height:32px}
 
 .rodape .marca-pe{
   font-family:"Cormorant Garamond",Georgia,serif;
@@ -483,7 +485,7 @@ section[id]{scroll-margin-top:110px}
   .capa .hero-in h1{font-size:38px}
   .zap{font-size:12px;letter-spacing:.12em;padding:8px 14px}
   .nav{gap:14px}
-  .rodape{padding:64px 0 90px}
+  .rodape{padding:64px 0 56px}
 }
 
 @media (max-width:560px){
