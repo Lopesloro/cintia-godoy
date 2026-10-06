@@ -19,8 +19,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icone-48.png" type="image/png" sizes="48x48">
+<link rel="icon" href="/icone-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/app.css?v=48">
 <script>
 (function(){var h=document.documentElement;if('IntersectionObserver'in window){h.className+=' js';
@@ -31,21 +34,74 @@ setTimeout(function(){if(h.dataset.revealOk!=='1')h.className=h.className.replac
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@type":"HealthAndBeautyBusiness",
+  "@type":["HealthAndBeautyBusiness","DaySpa"],
+  "@id":"https://www.cintiagodoy.com.br/#negocio",
   "name":"Cíntia Godoy Estética e Bem-Estar",
+  "alternateName":"Cíntia Godoy Spa Urbano",
   "description":"Spa urbano em Mogi Mirim: drenagem linfática relaxante, head spa, limpeza de pele biofotônica, depilação a laser, massoterapia e quick massage para empresas.",
   "url":"https://www.cintiagodoy.com.br/",
-  "image":"https://www.cintiagodoy.com.br/assets/img/og.jpg",
+  "image":[
+    "https://www.cintiagodoy.com.br/assets/img/og.jpg",
+    "https://www.cintiagodoy.com.br/assets/img/hero.jpg",
+    "https://www.cintiagodoy.com.br/assets/img/cintia.jpg"
+  ],
+  "logo":"https://www.cintiagodoy.com.br/icone-512.png",
   "telephone":"+5519974108030",
+  "priceRange":"R$ 170 - R$ 250",
+  "currenciesAccepted":"BRL",
   "founder":{"@type":"Person","name":"Cíntia Godoy","jobTitle":"Técnica em Estética"},
   "address":{
     "@type":"PostalAddress",
     "streetAddress":"Avenida Santo Antônio, 127",
     "addressLocality":"Mogi Mirim",
     "addressRegion":"SP",
+    "postalCode":"13800-000",
     "addressCountry":"BR"
   },
-  "sameAs":["https://www.instagram.com/cintiagodoyestetica/"]
+  "geo":{"@type":"GeoCoordinates","latitude":-22.4306413,"longitude":-46.9589393},
+  "hasMap":"https://www.google.com/maps/dir/?api=1&destination=Avenida+Santo+Ant%C3%B4nio%2C+127%2C+Centro%2C+Mogi+Mirim+-+SP",
+  "areaServed":[
+    {"@type":"City","name":"Mogi Mirim"},
+    {"@type":"City","name":"Mogi Guaçu"},
+    {"@type":"City","name":"Itapira"},
+    {"@type":"City","name":"Conchal"}
+  ],
+  "availableLanguage":"pt-BR",
+  "sameAs":[
+    "https://www.instagram.com/cintiagodoyestetica/",
+    "https://wa.me/5519974108030"
+  ],
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog",
+    "name":"Atendimentos",
+    "itemListElement":[
+      {"@type":"Offer","price":"180","priceCurrency":"BRL",
+       "itemOffered":{"@type":"Service","name":"Drenagem linfática relaxante","serviceType":"Drenagem linfática","url":"https://www.cintiagodoy.com.br/servicos.html#drenagem"}},
+      {"@type":"Offer","price":"250","priceCurrency":"BRL",
+       "itemOffered":{"@type":"Service","name":"Head spa","serviceType":"Head spa","url":"https://www.cintiagodoy.com.br/servicos.html#head-spa"}},
+      {"@type":"Offer","price":"170","priceCurrency":"BRL",
+       "itemOffered":{"@type":"Service","name":"Limpeza de pele biofotônica","serviceType":"Limpeza de pele","url":"https://www.cintiagodoy.com.br/servicos.html#limpeza-de-pele"}},
+      {"@type":"Offer","price":"220","priceCurrency":"BRL",
+       "itemOffered":{"@type":"Service","name":"Limpeza de pele acne detox","serviceType":"Limpeza de pele","url":"https://www.cintiagodoy.com.br/servicos.html#limpeza-de-pele"}},
+      {"@type":"Offer",
+       "itemOffered":{"@type":"Service","name":"Depilação a laser","serviceType":"Depilação a laser","url":"https://www.cintiagodoy.com.br/servicos.html#laser"}},
+      {"@type":"Offer",
+       "itemOffered":{"@type":"Service","name":"Drenagem linfática com protocolo personalizado para lipedema","serviceType":"Cuidado no lipedema","url":"https://www.cintiagodoy.com.br/servicos.html#lipedema"}},
+      {"@type":"Offer",
+       "itemOffered":{"@type":"Service","name":"Quick massage para empresas e eventos","serviceType":"Quick massage corporativa","url":"https://www.cintiagodoy.com.br/empresas.html"}}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "@id":"https://www.cintiagodoy.com.br/#site",
+  "url":"https://www.cintiagodoy.com.br/",
+  "name":"Cíntia Godoy Estética e Bem-Estar",
+  "inLanguage":"pt-BR",
+  "publisher":{"@id":"https://www.cintiagodoy.com.br/#negocio"}
 }
 </script>
 </head>
