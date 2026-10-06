@@ -1,4 +1,36 @@
 User-agent: *
 Allow: /
 
+# Robôs de busca com IA, liberados de propósito: bloquear qualquer um deles
+# tira o site das respostas que aquela ferramenta gera.
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
 Sitemap: https://www.cintiagodoy.com.br/sitemap.xml

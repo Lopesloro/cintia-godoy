@@ -381,6 +381,22 @@ section[id]{scroll-margin-top:110px}
 
 /* ---------- localização ---------- */
 
+/* ---------- perguntas frequentes ---------- */
+/* lista editorial em duas colunas, separada por filete: o padrao do site nao
+   admite cartao com sombra nem sanfona que esconde a resposta do buscador */
+
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:0 70px;max-width:980px;margin:0 auto}
+.faq-item{padding:30px 0;border-top:1px solid var(--line)}
+.faq-item h3{margin-bottom:12px}
+.faq-item p{margin:0;color:var(--ink-soft)}
+
+@media (max-width:860px){
+  .faq{grid-template-columns:1fr;gap:0}
+  .faq-item{padding:24px 0}
+}
+
+/* ---------- localização ---------- */
+
 .local{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
 .local .mapa{aspect-ratio:4/3;border:1px solid var(--line);background:var(--cream)}
 .local .mapa iframe{width:100%;height:100%;border:0;display:block}
