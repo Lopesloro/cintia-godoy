@@ -7,6 +7,9 @@ services:
     buildCommand: ""
     staticPublishPath: .
     pullRequestPreviewsEnabled: false
+    domains:
+      - cintiagodoy.com.br
+      - www.cintiagodoy.com.br
     headers:
       - path: /assets/*
         name: Cache-Control

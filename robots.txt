@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cintia-godoy.onrender.com/sitemap.xml
+Sitemap: https://cintiagodoy.com.br/sitemap.xml
