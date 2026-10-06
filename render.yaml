@@ -10,7 +10,6 @@ services:
     domains:
       - www.cintiagodoy.com.br
       - cintiagodoy.com.br
-      - www.cintiagodoy.com.br
     headers:
       - path: /assets/*
         name: Cache-Control
