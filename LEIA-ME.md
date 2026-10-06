@@ -1,6 +1,6 @@
 # Site Cíntia Godoy Estética e Bem-Estar
 
-Site estático, sem build e sem dependência. No ar em https://cintiagodoy.com.br
+Site estático, sem build e sem dependência. No ar em https://www.cintiagodoy.com.br
 
 ## Páginas
 - `index.html` home, com o texto de apresentação dela, os cinco atendimentos e a galeria do espaço

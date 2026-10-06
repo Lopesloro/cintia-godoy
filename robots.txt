@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cintiagodoy.com.br/sitemap.xml
+Sitemap: https://www.cintiagodoy.com.br/sitemap.xml
